@@ -1,0 +1,3 @@
+[submodule "ASLoc"]
+	path = ASLoc
+	url = https://github.com/rogeliam/ASLoc
