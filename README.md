@@ -5,7 +5,7 @@ NOT YET AVAILABLE on this page.
 
 The code is in a **.odt** file or **.n** file, respectively, that can be downloaded from this site and you can run it with Magma.
 
-An Erratum for the paper *On the asymptotic category* can be found at the bottom of the page.
+An Erratum for these papers can be found at the bottom of the page.
 
 # Contact
 
@@ -18,14 +18,21 @@ Same goes for any errors related to this page.
 
 # Background
 
-The two tandem papers (*Idempotents, traces, and dimensions in Hecke categories* can be read independent of the other) identify the asymtotic (Hecke) category $\mathbf{A}_{\mathcal{H}}$ for diagonal H-cells $\mathcal{H}$ and all finite Coxeter types with few exceptions. 
-Let us go through the cases, with reference to the list of irreducible finite Coxeter groups as e.g. here: <a href="https://en.wikipedia.org/wiki/Coxeter_group#Classification">https://en.wikipedia.org/wiki/Coxeter_group#Classification</a>.
+These two tandem papers study the **asymptotic (Hecke) category** A(H) attached to a diagonal H-cell H in a finite Coxeter type. Informally: start with the (diagrammatic) Hecke category, restrict to a cell, and then pass to an “asymptotic” quotient where only the leading cell-behavior remains. The outcome is a rigid, semisimple, tensor category. So, in practice, a fusion category, whose structure reflects subtle cell combinatorics.
 
-- First, if the Coxeter type is classical (types A,B,C,D), then $\mathbf{A}_{\mathcal{H}}$ is a well-known and uncomplicated fusion category, namely the category $\mathbf{Vec}(G)$ of vector spaces graded by an elementary abelian 2-group $G$.
+The first paper (*Idempotents, traces, and dimensions in Hecke categories*) develops the computational toolkit:
+- computing **primitive idempotents** projecting to indecomposable objects,
+- computing **partial traces**, and from them
+- **categorical dimensions** in A(H),
+in a way that is designed to be implemented on a computer.
 
-- In all other types we list in the paper what we expect the asymtotic category to be, and also when we were able to verify that it is what it is.
+The second paper (*Computing in the asymptotic category*) applies this technology to identify A(H) in finite types, with only a small number of remaining cases (concentrated in type H4). A key idea throughout is that categorical dimensions are a strong invariant: they sharply constrain (and often uniquely determine) which fusion category A(H) can be.
 
-The idea is that one can identify $\mathbf{A}_{\mathcal{H}}$ by computing cateogrical dimensions, and the program below can do that using Magma.
+Concretely, the outcome is:
+- In **classical types** (A,B,C,D), A(H) is the expected pointed fusion category, namely Vec(G) for an elementary abelian 2-group G.
+- In the **exceptional types**, we list explicit predictions and verifications case-by-case, and the Magma code below is meant to reproduce the relevant dimension/idempotent computations.
+
+(For reference on finite Coxeter types, see the standard classification list, e.g. <a href="https://en.wikipedia.org/wiki/Coxeter_group#Classification">https://en.wikipedia.org/wiki/Coxeter_group#Classification</a>.)
 
 # The Magma code
 
